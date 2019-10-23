@@ -1,6 +1,6 @@
 {
   "name": "usefetch-hook-jeje-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "useFetch React custom hook",
   "main": "useFetch.js",
   "scripts": {
