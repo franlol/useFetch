@@ -16,13 +16,13 @@ With this hook you can get the following vars in your functional components:
 Just install:
 
 ```console
-npm install usefetch
+npm install react-hook-usefetch
 ```
 
 And import the hook.
 
 ```javascript
-import useFetch from './useFetch';
+import useFetch from 'react-hook-usefetch';
 ```
 
 Use it in your component:
@@ -30,7 +30,7 @@ Use it in your component:
 ```javascript
 const yourComponent = props => {
 	...
-	const data = useFetch('url', options);
+  const data = useFetch('url', options);
   ...
 }
 ```
@@ -53,6 +53,9 @@ const options = {
 ## Full Example
 
 ```javascript
+import React from 'react';
+import useFetch from 'react-hook-usefetch';
+
 export default () => {
   const { data, loading, error } = useFetch('https://pokeapi.co/api/v2/pokemon', {});
 
