@@ -18,5 +18,10 @@
   ],
   "author": "franlol",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/franlol/useFetch.git"
+  },
+  "homepage": "https://github.com/franlol/useFetch#readme",
   "dependencies": {}
 }

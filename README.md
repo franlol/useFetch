@@ -6,10 +6,12 @@ Also can handle errors and loading state.
 
 ## Why useFetch?
 
-With this hook you can get the following vars in your functional components:
+With this hook, you can get a json data from an url and handle the following variables:
 - Fetched data.
 - Loading boolean.
 - Error data.
+
+When that vars are updated, your component is re-rendedred.
 
 ## Usage
 
@@ -28,8 +30,8 @@ import useFetch from 'react-hook-usefetch';
 Use it in your component:
 
 ```javascript
-const yourComponent = props => {
-	...
+const YourComponent = props => {
+  ...
   const data = useFetch('url', options);
   ...
 }
