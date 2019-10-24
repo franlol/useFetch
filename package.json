@@ -1,6 +1,6 @@
 {
   "name": "react-hook-usefetch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "useFetch React custom hook",
   "main": "useFetch.js",
   "scripts": {
