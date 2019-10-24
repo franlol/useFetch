@@ -17,5 +17,6 @@
     "state"
   ],
   "author": "franlol",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
