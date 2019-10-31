@@ -7,6 +7,7 @@ Also can handle errors and loading state.
 ## Why useFetch?
 
 With this hook, you can get a json data from an url and handle the following variables:
+
 - Fetched data.
 - Loading boolean.
 - Error data.
@@ -39,16 +40,15 @@ const YourComponent = props => {
 
 Optional, you can send personal settings as second parameter:
 
-
 ```javascript
 const headers = new Headers();
 
 const options = {
-    method: 'GET',
-    headers,
-    mode: 'cors',
-    cache: 'default',
-    ...more
+  method: 'GET',
+  headers,
+  mode: 'cors',
+  cache: 'default',
+  ...more
 };
 ```
 
@@ -62,19 +62,25 @@ export default () => {
   const { data, loading, error } = useFetch('https://pokeapi.co/api/v2/pokemon', {});
 
   const getData = () => {
-    if (error.status) return <li><p>Error: {error.message}</p></li>;
-    if (loading) return <li><p>Loading...</p></li>;
-    if (data.results) return data.results.map((poke, i) => <li key={`poke-${i}`}><p>{poke.name}</p></li>);
-  }
+    if (loading) {
+      return <p>Loading...</p>;
+    }
+    if (error.status) {
+      return <p>Error: {error.message}</p>;
+    }
+    if (!data.results) {
+      return <p>No data results</p>;
+    }
+    if (data.results) {
+      return data.results.map((poke, i) => <p key={`poke-${i}`}>{poke.name}</p>);
+    }
+  };
 
   return (
     <div>
       <h1>Test</h1>
-      <ul>
-        {getData()}
-      </ul>
+      {getData()}
     </div>
   );
-
-}
+};
 ```
