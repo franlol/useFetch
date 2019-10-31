@@ -68,6 +68,9 @@ export default () => {
     if (error.status) {
       return <p>Error: {error.message}</p>;
     }
+    if (!data.results) {
+      return <p>No data results</p>;
+    }
     if (data.results) {
       return data.results.map((poke, i) => <p key={`poke-${i}`}>{poke.name}</p>);
     }
